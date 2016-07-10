@@ -9,6 +9,7 @@
             <h3 style="line-height:30px; color:#751515;">
                Our application consists of an inventory management system for Indigo's store that will help staff considerably. Management can enter and delete new items or categories and users will be able to search.​ 
             </h3>
+            
            
         </div>
 </div>

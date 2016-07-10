@@ -18,14 +18,14 @@
         
 
      <div class="form-group">
-        Your name:
+        Your name=
         <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="*"
             ControlToValidate="YourName" ValidationGroup="save" />
         <asp:TextBox ID="YourName" runat="server" Width="400px" CssClass="form-control"/>
       </div>
 
        <div class="form-group">
-        Your email address:
+        Your email address=
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
             ControlToValidate="YourEmail" ValidationGroup="save" />
         <asp:TextBox ID="YourEmail" runat="server" Width="400px" CssClass="form-control" />
