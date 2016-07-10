@@ -1,0 +1,126 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+footer {
+    margin-top:55px;
+    color:#999999;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+        background-image:url(../images/bookmural3.jpg);
+        color:#ffffff;
+        height: 330px;
+        margin-top:30px;
+
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+/*tables*/
+
+.tabletwo {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ffffff;
+  
+  
+}
+
+.tabletwo th, td {
+    border: none;
+    text-align: left;
+    padding: 10px;
+  
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  
+}
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+/*
+
+tr:nth-child(even){background-color: #f2f2f2}
+    */
+
+/*tables*/
+
+
+
+
+.bannertext {
+
+  
+    width:630px;
+    font-size:14px;
+    border-radius:10px;
+    padding:10px;
+    opacity:0.9;
+    line-height:26px;
+    margin-top:20px;
+    color:#f2f2f2;
+   
+   background-color:rgb(20, 0, 33);
+ 
+   
+}
+
+.btnbanner {
+     color:#39ffb0;
+     font-size:16px;
+     font-weight:bold;
+     margin-top:15px;
+   
+}
+
+.flip {
+
+    -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+     
+}
