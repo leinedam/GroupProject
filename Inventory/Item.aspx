@@ -12,11 +12,8 @@
 
               </div>
               
-                   <div class="col-md-4">  
-                    <ul class="nav nav-pills nav-justified">
-                      <li><a href="Stock.aspx">Stock</a></li>
-                      <li class="active"><a href="#">Add Item</a></li>
-                    </ul>
+                   <div class="col-md-4" style="text-align:right">  
+                     <a class="btn btn-default" href="stock.aspx">Return to Stock &raquo;</a>
                  </div>
         
  </div>
@@ -105,21 +102,46 @@
 
                         </tr>
                            </tr>
-                           <th>&nbsp;</th>
-                          <td>
+                           <th>  
                               <asp:Button ID="Button1"  class="btn btn-warning" runat="server" OnClick="Button1_Click" Text="Add Book" />
                               
-                               </td>
+                            
+                              
+                          </th>
+                          <td>
+                              <asp:Label ID="bookaddlbl" runat="server" Text="" Font-Bold="true" ForeColor="#ff3300"></asp:Label>
+                              
+                            
+                              
                         </tr>
 
-                      </table>
+                          <tr>
+                          <th><a class="btn btn-link" href="../ImpExp/ImpExp.aspx">Import from file &raquo;</a></th>
+                          <td></td>
+                           </tr>
 
-         </div>
+
+                            <tr>
+                          <th></th>
+                          <td>
+                              &nbsp;</td></td>
+                           </tr>
+
+
+                            <tr>
+                          <th></th>
+                          <td></td>
+                           </tr>
+                         
+                           
+                      </table>
+              &nbsp;</div>
 
 
 
      <div class="col-md-3">   
-
+            
+          
      </div>
   </div>
 

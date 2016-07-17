@@ -9,6 +9,20 @@ using System.Configuration;
 /// <summary>
 /// Summary description for BooksDLL
 /// </summary>
+/// 
+/*
+ *   SqlDataAdapter sDA = new SqlDataAdapter(query, connectionString);
+ DataTable table = new DataTable();
+ sDA.Fill(table);
+
+ foreach (DataRow row in table.Rows)
+ {
+    string pc = (row["PCs"].ToString());
+     //send files
+ }
+ * 
+ * */
+
 public class BooksDLL
 {
 
@@ -30,8 +44,11 @@ public class BooksDLL
 
         da = new SqlDataAdapter("Select * from books", cn);
         ds = new DataSet();
-        da.Fill(ds);
+
+        da.Fill(ds).ToString();
+      
         return ds;
+        
     }
 
 
