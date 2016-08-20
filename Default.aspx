@@ -24,7 +24,7 @@
             </p>
             </br>     
             <p style="text-align:center;">
-                <a class="btn btn-primary btn-lg" href="Account/Login.aspx">START &raquo;</a>
+                <a class="btn btn-primary btn-lg" href="Inventory/Stock.aspx">START &raquo;</a>
 
             </p>
         </div>

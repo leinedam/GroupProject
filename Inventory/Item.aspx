@@ -56,10 +56,7 @@
                            <th>Publisher</th>
                           <td> 
                               <asp:TextBox ID="TextBoxPub" runat="server"></asp:TextBox>
-                                <!-- validation        -->        
-                               <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"  ControlToValidate="TextBoxPub"  ErrorMessage="Publisher is required!" ForeColor="Red" /> 
-                           
-                        
+
                           </td>
                         </tr>
                            </tr>
@@ -94,7 +91,18 @@
                                 <!-- validation    -->  
                               <asp:RegularExpressionValidator id="TextBoxRetailValidator2"  runat="server" ControlToValidate="TextBoxRetail"  ValidationExpression="\d+.?\d*"  ErrorMessage="You must enter a valid number!" ForeColor="Red" />           
                           </td>
+
                           </tr>
+                           </tr>
+                           <th>Description</th>
+                          <td>
+                           <asp:TextBox ID="TextBoxdes" runat="server" Height="46px" Width="320px"></asp:TextBox>
+                              </td>
+                        </tr>
+                           </tr> <th>Image url</th>
+                          <td>
+                           <asp:TextBox ID="TextBoximg" runat="server" Width="318px"></asp:TextBox>
+                         </tr>
                            </tr>
                            <th></th>
                           <td></td>

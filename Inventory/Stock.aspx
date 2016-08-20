@@ -25,7 +25,8 @@
                <div class="col-md-4" style="text-align:right">  
 
                     <a class="btn btn-warning" href="Item.aspx">Add Item &raquo;</a>
-
+                   
+                    
                     <asp:Button ID="btnExportToCSV" runat="server" Text="Export" OnClick="btnExportToCSV_Click" CssClass="btn btn-info" /> 
                     
               </div>
@@ -41,7 +42,7 @@
      
    <div class="row">
        <div "style="overflow-x:auto;">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AllowSorting="True" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" CaptionAlign="Left">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" AllowSorting="True" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" CaptionAlign="Left" Width="100%">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:TemplateField HeaderText="Title" SortExpression="Title">
@@ -80,7 +81,13 @@
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
             <asp:CommandField ShowEditButton="True" ButtonType="Button" ShowDeleteButton="True" />
             <asp:BoundField DataField="Retail" HeaderText="Retail" SortExpression="Retail" Visible="False" />
-            <asp:HyperLinkField NavigateUrl="~/BookInfo/BookInfo.aspx" SortExpression="ISBN" Text="View Details" />
+            <asp:BoundField DataField="Description" HeaderText="Description" Visible="False" />
+            <asp:BoundField DataField="CoverImage" HeaderText="Book Image" Visible="False"/>
+            
+            
+            <asp:HyperLinkField DataNavigateUrlFields="ISBN" DataNavigateUrlFormatString="~/BookInfo/BookInfo.aspx?ISBN={0}" Text="View Details" />
+
+            
         </Columns>
         <EditRowStyle BackColor="#999999" />
         <EmptyDataTemplate>
@@ -97,7 +104,7 @@
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
 
-           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [books]" DeleteCommand="DELETE FROM [books] WHERE [ISBN] = @ISBN" InsertCommand="INSERT INTO [books] ([Title], [ISBN], [Author], [Publisher], [Category], [Quantity], [Price], [Retail]) VALUES (@Title, @ISBN, @Author, @Publisher, @Category, @Quantity, @Price, @Retail)" UpdateCommand="UPDATE [books] SET [Title] = @Title, [Author] = @Author, [Publisher] = @Publisher, [Category] = @Category, [Quantity] = @Quantity, [Price] = @Price, [Retail] = @Retail WHERE [ISBN] = @ISBN">
+           <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [books]" DeleteCommand="DELETE FROM [books] WHERE [ISBN] = @ISBN" InsertCommand="INSERT INTO [books] ([Title], [ISBN], [Author], [Publisher], [Category], [Quantity], [Price], [Retail], [CoverImage], [Description]) VALUES (@Title, @ISBN, @Author, @Publisher, @Category, @Quantity, @Price, @Retail, @CoverImage, @Description)" UpdateCommand="UPDATE [books] SET [Title] = @Title, [Author] = @Author, [Publisher] = @Publisher, [Category] = @Category, [Quantity] = @Quantity, [Price] = @Price, [Retail] = @Retail WHERE [ISBN] = @ISBN">
                <DeleteParameters>
                    <asp:Parameter Name="ISBN" Type="String" />
                </DeleteParameters>
@@ -110,10 +117,11 @@
                    <asp:Parameter Name="Quantity" Type="Int32" />
                    <asp:Parameter Name="Price" Type="Decimal" />
                    <asp:Parameter Name="Retail" Type="Decimal" />
+                   <asp:Parameter Name="CoverImage" Type="String"/>
+                   <asp:Parameter Name="Description" Type="String"/>
                </InsertParameters>
                <UpdateParameters>
                    <asp:Parameter Name="Title" Type="String" />
-                 
                    <asp:Parameter Name="Author" Type="String" />
                    <asp:Parameter Name="Publisher" Type="String" />
                    <asp:Parameter Name="Category" Type="String" />
@@ -121,13 +129,11 @@
                    <asp:Parameter Name="Price" Type="Decimal" />
                    <asp:Parameter Name="Retail" Type="Decimal" />
                    <asp:Parameter Name="ISBN" Type="String" />
+                   <asp:Parameter Name="CoverImage" Type="String"/>
+                   <asp:Parameter Name="Description" Type="String"/>
                </UpdateParameters>
            </asp:SqlDataSource>
     </div>
-    
 </div>
-
-
     </div>
 </asp:Content>
-

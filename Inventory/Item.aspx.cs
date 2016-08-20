@@ -17,7 +17,10 @@ public partial class Inventory_Stock : System.Web.UI.Page
         bookaddlbl.Text = "Book added successfully!";
         SqlCommand cmd = con.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "Insert into books VALUES('" + TextBoxBookName.Text + "','" + TextBoxIsbn.Text + "','" + TextBoxAuthor.Text + "','" + TextBoxPub.Text + "','" + TextBoxCategory.Text + "','" + TextBoxQuant.Text + "','" + TextBoxPrice.Text + "','" + TextBoxRetail.Text + "')";
+        cmd.CommandText = "Insert into books VALUES('" + TextBoxBookName.Text + "','" + TextBoxIsbn.Text + "','" + TextBoxAuthor.Text + "','" + TextBoxPub.Text + "','" + TextBoxCategory.Text + "','" + TextBoxQuant.Text + "','" + TextBoxPrice.Text + "','" + TextBoxRetail.Text + "','" + TextBoxdes.Text + "','" + TextBoximg.Text + "')";
+
+
+        Console.WriteLine("'{0}'", DBNull.Value.ToString());
         cmd.ExecuteNonQuery();
         con.Close();
 

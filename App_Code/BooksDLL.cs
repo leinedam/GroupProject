@@ -101,6 +101,15 @@ public class BooksDLL
         cmd.ExecuteNonQuery();
         cn.Close();
     }
+
+
+    public DataSet SelectMonth() {
+       // cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Madeleine\Documents\REPOSIT\GroupProject-1-Master\App_Data\Database.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+        da = new SqlDataAdapter("Select category from books ", cn);
+        ds = new DataSet();
+        da.Fill(ds);
+        return ds;
+    }
 }
 
 

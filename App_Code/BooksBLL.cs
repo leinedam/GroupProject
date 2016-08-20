@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
+using System.Data.SqlClient;
 
 /// <summary>
 /// Summary description for BooksBLL
@@ -43,6 +44,8 @@ public class BooksBLL
         edll.Delete_Book(isbn);
 
     }
+
+    
 
 
 }

@@ -35,6 +35,7 @@
                                   <asp:FileUpload ID="FileUpload1" runat="server" BorderColor="#808080" BackColor="#e1e1e1" Width="300px"  />
                               </td>
                               <td style="text-align:right">
+            
                                   <asp:Button ID="btnImportFromCVS" runat="server" Text="Import data To Books" OnClick="btnImportFromCVS_Click" CssClass="btn btn-danger" />
                              </td> 
                               <td>

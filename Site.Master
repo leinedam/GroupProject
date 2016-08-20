@@ -55,7 +55,7 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Inventory/Stock.aspx">Stock</a></li>
-                        <li><a runat="server" href="~/BookInfo/Analysis.aspx">Analysis</a></li>
+                        <li><a runat="server" href="~/BookInfo/Analysis3.aspx">Reports</a></li>
                         <li><a runat="server" href="~/ImpExp/ImpExp.aspx">Import/Export</a></li>
                         <li><a runat="server" href="~/Support"><span class="glyphicon glyphicon-envelope"></span></a></li>
                     </ul>
